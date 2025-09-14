@@ -1,0 +1,39 @@
+import requests
+
+# Analyze expenses
+response = requests.post("http://localhost:8000/api/analyze", 
+    json={"expenses": [{"amount": 50, "category": "food", "date": "2025-01-15"}]})
+
+# Get recommendations
+response = requests.post("http://localhost:8000/api/recommend", 
+    json={"monthly_income": 5000, "monthly_expenses": 3500})
+Architectures 
+🏗️ Architecture
+
+Backend: FastAPI with Python
+Frontend: Vanilla JavaScript (progressive enhancement)
+Database: PostgreSQL with Redis caching
+AI/ML: Hugging Face Transformers + Custom Financial Models
+Security: JWT authentication, data encryption at rest
+Deployment: Docker containerized, cloud-ready
+
+📊 Features Deep Dive
+Expense Categorization
+
+Automatic transaction categorization using ML
+Custom category creation
+Trend analysis and anomaly detection
+
+Investment Recommendations
+
+Risk tolerance assessment
+Market condition analysis
+Diversification strategies
+Emergency fund prioritization
+
+Privacy & Security
+
+Local data processing option
+Encrypted data storage
+No personal data sharing
+GDPR compliant
