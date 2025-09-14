@@ -1,0 +1,21 @@
+Set up environment
+
+bash   cp .env.example .env
+   # Edit .env with your configuration
+
+Install dependencies
+
+bash   pip install -r requirements.txt
+
+Run with Docker (Recommended)
+
+bash   docker-compose up --build
+
+Or run locally
+
+bash   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Access the application
+
+Web Interface: http://localhost:8000
+API Documentation: http://localhost:8000/docs
